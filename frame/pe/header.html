@@ -1,0 +1,33 @@
+<!-- Header -->
+<header id="header">
+    <div class="inner">
+        <a href="{{base}}" class="logo">
+            <img class="logo-img" src="{{base}}asset/logo_transparent_cut.png" alt="logo">
+        </a>
+        <nav id="nav">
+            <a href="{{base}}">Home</a>
+            <a href="{{base}}learn-more/">Learn more</a>
+        </nav>
+        <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+    </div>
+
+</header>
+<ul class="mobile-dropdown" style="display: none"></ul>
+<script>
+    const navPane = document.querySelector('.mobile-dropdown');
+    const links = document.querySelectorAll('#nav a');
+    let li;
+    links.forEach(link => {
+        li = document.createElement('li');
+        li.appendChild(link.cloneNode(true));
+        navPane.appendChild(li);
+    });
+    document.querySelector('.navPanelToggle').addEventListener('click',ev =>{
+        ev.preventDefault();
+        if(navPane.style.display === 'none'){
+            navPane.style.display = 'block'
+        } else {
+            navPane.style.display = 'none'
+        }
+    })
+</script>

@@ -1,0 +1,23 @@
+.logo-img{
+    width: 50px;
+}
+@media (min-width: 980px) {
+    .logo-img{
+        width: 90px;
+    }
+}
+body{
+    position: relative;
+}
+.mobile-dropdown{
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    z-index: 10002;
+    background: rgba(255,255,255,.8);
+}
+.mobile-dropdown li{
+    padding:8px;
+    list-style: none;
+    z-index: 10002;
+}
